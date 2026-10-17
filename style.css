@@ -8,3 +8,11 @@
 .cookie-panel{position:fixed;z-index:9999;left:0;right:0;bottom:0;padding:22px clamp(18px,5vw,70px);background:rgba(255,255,255,.98);border-top:2px solid var(--gold);box-shadow:0 -12px 40px rgba(0,0,0,.18);color:var(--ink)}
 .cookie-inner{max-width:1300px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:28px}.cookie-kicker{font-size:10px;font-weight:800;letter-spacing:2px;color:#9c7a35;margin:0 0 8px}.cookie-inner h2{font:700 21px Manrope,Arial,sans-serif;margin:0 0 7px}.cookie-inner p:not(.cookie-kicker){font-size:13px;line-height:1.65;color:#555d62;margin:0;max-width:850px}.cookie-inner p a{text-decoration:underline;text-underline-offset:3px}.cookie-actions{display:flex;gap:10px;flex-shrink:0;flex-wrap:wrap}.cookie-actions .button{cursor:pointer;border:1px solid #b9b6ad}.cookie-actions .outline{color:#171b20}.legal-placeholder{background:#fff0c7;color:#704d00;padding:2px 4px}.legal-warning{border-left:4px solid var(--gold);padding:14px 16px;background:#fbf6e8}.legal h2{margin-top:28px}.legal-reset{cursor:pointer;background:var(--gold)!important;color:#171b20!important;border:1px solid #b89a53!important;text-shadow:none!important}
 @media(max-width:760px){.cookie-inner{align-items:stretch;flex-direction:column;gap:16px}.cookie-actions{display:grid;grid-template-columns:1fr 1fr}.cookie-actions .button{padding:0 10px;min-height:46px;font-size:11px}.cookie-inner h2{font-size:19px}.cookie-panel{padding:18px}.legal{padding:38px 20px}}
+
+/* Unterseiten: belastbarer Bildkontrast und einheitlicher, hochwertiger Bildausschnitt */
+.subhero{min-height:390px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;background-color:#202326;background-repeat:no-repeat;background-size:cover;background-position:center 52%;position:relative;isolation:isolate}
+.subhero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,15,17,.88) 0%,rgba(12,15,17,.62) 48%,rgba(12,15,17,.18) 100%);z-index:-1;pointer-events:none}
+.subhero>*{position:relative}
+.subhero .button{margin-top:14px;min-width:180px}
+.service-card{background-repeat:no-repeat;background-size:cover}
+@media(max-width:760px){.subhero{min-height:350px;padding-top:72px;padding-bottom:72px;background-position:center}.subhero h1{letter-spacing:-1.2px}.subhero .button{width:auto;min-width:190px}}
