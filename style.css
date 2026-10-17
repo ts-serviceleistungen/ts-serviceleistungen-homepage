@@ -44,3 +44,21 @@
   background:var(--gold) !important;
   border-color:var(--gold) !important;
 }
+
+
+/* Sichtbarer Startseiten-CTA – explizite Link-Regeln gegen überschreibende Styles */
+.hero .hero-actions a.button.gold,
+.hero .hero-actions a.button.gold:link,
+.hero .hero-actions a.button.gold:visited{
+  display:inline-flex !important; align-items:center; justify-content:center; gap:18px;
+  color:#171b20 !important; background:#d6b15d !important; border:1px solid #d6b15d !important;
+  text-shadow:none !important; opacity:1 !important; visibility:visible !important;
+}
+.hero .hero-actions a.button.outline,
+.hero .hero-actions a.button.outline:link,
+.hero .hero-actions a.button.outline:visited{
+  display:inline-flex !important; align-items:center; justify-content:center;
+  color:#fff !important; background:rgba(24,27,29,.55) !important;
+  border:1px solid rgba(255,255,255,.8) !important; text-shadow:none !important;
+  opacity:1 !important; visibility:visible !important;
+}
