@@ -74,3 +74,38 @@
 
 /* Galerie und geschützter Uploadbereich */
 .gallery-filter{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0}.gallery-filter .button{cursor:pointer}.gallery-filter .active{background:var(--gold)!important;color:var(--ink)!important;border-color:var(--gold)!important}.gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin:28px 0}.gallery-card{overflow:hidden;border:1px solid var(--line);border-radius:12px;background:#fff;min-width:0}.gallery-card>img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:#ecebe6}.gallery-card-body{padding:16px}.gallery-card-body small{color:#9b7b3b;font-weight:700;letter-spacing:.5px}.gallery-card-body h3{font:700 19px Manrope,Arial,sans-serif;margin:8px 0;color:var(--ink)}.gallery-card-body p{color:#565d61;line-height:1.65}.gallery-card-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.gallery-card-actions .button{font-size:12px;min-height:38px;padding:0 12px;cursor:pointer}.gallery-empty{color:var(--muted)}.gallery-status{margin:16px 0;color:#32643c;overflow-wrap:anywhere}.gallery-status.error{color:#a12626}.gallery-admin-entry{margin-top:45px;padding-top:25px;border-top:1px solid var(--line)}.gallery-admin{margin-top:20px;padding:clamp(18px,4vw,36px);background:#f7f6f2;border:1px solid var(--line);border-radius:14px}.gallery-admin[hidden],#uploadArea[hidden],#loginForm[hidden]{display:none!important}.gallery-form{display:grid;gap:10px;max-width:600px;margin:22px 0}.gallery-form label{font-weight:700;font-size:13px}.gallery-form input:not([type=checkbox]),.gallery-form textarea,.gallery-form select{width:100%;padding:13px;border:1px solid #c9c8c1;border-radius:7px;font:inherit;background:#fff}.gallery-form input[type=file]{padding:10px;background:#fff}.gallery-form .button{cursor:pointer;min-height:46px}.gallery-check{display:flex;align-items:center;gap:10px;margin:8px 0}.admin-image-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.gallery-rights{font-size:12px;color:var(--muted);margin-top:32px}.gallery-card-actions .button{width:auto!important}.gallery-admin h3{margin-top:28px}@media(max-width:760px){.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.gallery-card-body{padding:12px}.gallery-card-body h3{font-size:16px}.admin-image-list{grid-template-columns:1fr}.gallery-filter{gap:7px}.gallery-filter .button{font-size:11px;padding:0 10px;min-height:40px}}@media(max-width:420px){.gallery-grid{grid-template-columns:1fr}}
+
+
+/* Einheitlicher Button-Kontrast auf ALLEN Seiten: helle Flächen brauchen dunkle Schrift */
+.button.outline,
+.button.outline:link,
+.button.outline:visited {
+  color: #202326 !important;
+  background: #fff !important;
+  border: 1px solid #a9a79f !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.button.outline:hover,
+.button.outline:focus-visible {
+  color: #171b20 !important;
+  background: #eee9dc !important;
+  border-color: #b89a53 !important;
+}
+.gallery-filter .button.outline.active,
+.gallery-filter .button.outline.active:link,
+.gallery-filter .button.outline.active:visited {
+  color: #171b20 !important;
+  background: #d6b15d !important;
+  border-color: #d6b15d !important;
+}
+/* Auf dunklen Hero-Bildern bleiben Outline-Buttons bewusst hell */
+.hero .hero-actions a.button.outline,
+.hero .hero-actions a.button.outline:link,
+.hero .hero-actions a.button.outline:visited,
+.subhero a.button.outline {
+  color: #fff !important;
+  background: rgba(24,27,29,.55) !important;
+  border: 1px solid rgba(255,255,255,.8) !important;
+}
