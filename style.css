@@ -109,3 +109,30 @@
   background: rgba(24,27,29,.55) !important;
   border: 1px solid rgba(255,255,255,.8) !important;
 }
+
+
+/* Kontrastkorrektur Galerie: Selektoren gezielt spezifischer als bestehende Regeln */
+.content-section .gallery-filter .button.outline:not(.active),
+.content-section .gallery-admin-entry > #adminToggle,
+.gallery-admin .button.outline,
+.gallery-card-actions .button.outline {
+  color: #202326 !important;
+  background: #ffffff !important;
+  border: 1px solid #a9a79f !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.content-section .gallery-filter .button.outline.active {
+  color: #171b20 !important;
+  background: #d6b15d !important;
+  border-color: #d6b15d !important;
+}
+.content-section .gallery-filter .button.outline:hover,
+.content-section .gallery-admin-entry > #adminToggle:hover,
+.gallery-admin .button.outline:hover,
+.gallery-card-actions .button.outline:hover {
+  color: #171b20 !important;
+  background: #eee9dc !important;
+  border-color: #b89a53 !important;
+}
