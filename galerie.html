@@ -14,12 +14,12 @@ const SUPABASE_KEY='sb_publishable_Hv4ZITas3Wtsrfh9uvf79Q_imOSNYYE';
 const db=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);
 const bucket='website-gallery';let activeCategory='Alle';let currentUser=null;
 const lightbox=document.createElement('div');
-lightbox.id='galleryLightbox';lightbox.className='gallery-lightbox';lightbox.hidden=true;
+lightbox.id='galleryLightbox';lightbox.className='gallery-lightbox';lightbox.hidden=true;lightbox.style.display='none';
 lightbox.innerHTML='<button type="button" class="gallery-lightbox-close" aria-label="Bild schließen">×</button><button type="button" class="gallery-lightbox-prev" aria-label="Vorheriges Bild">‹</button><img alt=""><button type="button" class="gallery-lightbox-next" aria-label="Nächstes Bild">›</button><p class="gallery-lightbox-caption"></p>';
 document.body.appendChild(lightbox);
 let lightboxImages=[],lightboxIndex=0;
-function showLightbox(index){lightboxIndex=(index+lightboxImages.length)%lightboxImages.length;const item=lightboxImages[lightboxIndex];const image=lightbox.querySelector('img');image.src=item.src;image.alt=item.alt||'';lightbox.querySelector('.gallery-lightbox-caption').textContent=item.caption||'';lightbox.hidden=false;document.body.style.overflow='hidden'}
-function closeLightbox(){lightbox.hidden=true;lightbox.querySelector('img').src='';document.body.style.overflow=''}
+function showLightbox(index){lightboxIndex=(index+lightboxImages.length)%lightboxImages.length;const item=lightboxImages[lightboxIndex];const image=lightbox.querySelector('img');image.src=item.src;image.alt=item.alt||'';lightbox.querySelector('.gallery-lightbox-caption').textContent=item.caption||'';lightbox.hidden=false;lightbox.style.display='flex';document.body.style.overflow='hidden'}
+function closeLightbox(){lightbox.hidden=true;lightbox.style.display='none';lightbox.querySelector('img').src='';document.body.style.overflow=''}
 lightbox.addEventListener('click',e=>{if(e.target===lightbox||e.target.classList.contains('gallery-lightbox-close'))closeLightbox();if(e.target.classList.contains('gallery-lightbox-prev'))showLightbox(lightboxIndex-1);if(e.target.classList.contains('gallery-lightbox-next'))showLightbox(lightboxIndex+1)});
 document.addEventListener('keydown',e=>{if(lightbox.hidden)return;if(e.key==='Escape')closeLightbox();if(e.key==='ArrowLeft')showLightbox(lightboxIndex-1);if(e.key==='ArrowRight')showLightbox(lightboxIndex+1)});
 const grid=document.getElementById('galleryGrid'),statusEl=document.getElementById('galleryStatus');
