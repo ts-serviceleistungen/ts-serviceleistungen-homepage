@@ -136,3 +136,15 @@
   background: #eee9dc !important;
   border-color: #b89a53 !important;
 }
+
+
+/* Galerie: Bilder vollständig und ohne Abschneiden anzeigen */
+.gallery-card > img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  max-height: 620px;
+  object-fit: contain;
+  object-position: center;
+  background: #f1f0ec;
+}
