@@ -241,3 +241,7 @@
 .subhero .text-link,.about-hero .text-link,.cta-band .text-link{
   color:#fff!important;border-bottom-color:#d6b15d;text-shadow:none!important;
 }
+
+
+/* Eigenständiges Motiv für die Vermittlung externer Brandschutzausbildungen */
+.brandschutz-hero{background-image:linear-gradient(90deg,rgba(14,17,18,.92) 0%,rgba(14,17,18,.68) 48%,rgba(14,17,18,.18) 100%),url("https://kevrongroup.com/assets/img/courses/eosh/eosh_fire_safety_1775030509274.png") !important;background-position:center 48%;background-size:cover;background-repeat:no-repeat;}
