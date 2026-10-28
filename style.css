@@ -245,3 +245,13 @@
 
 /* Eigenständiges Motiv für die Vermittlung externer Brandschutzausbildungen */
 .brandschutz-hero{background-image:linear-gradient(90deg,rgba(14,17,18,.92) 0%,rgba(14,17,18,.68) 48%,rgba(14,17,18,.18) 100%),url("https://kevrongroup.com/assets/img/courses/eosh/eosh_fire_safety_1775030509274.png") !important;background-position:center 48%;background-size:cover;background-repeat:no-repeat;}
+
+
+/* Brandschutzseite: eigenes, thematisch passendes Motiv und Cache-Busting */
+.brandschutz-hero,
+.subhero.brandschutz-hero {
+  background-image: linear-gradient(90deg, rgba(14,17,18,.92) 0%, rgba(14,17,18,.66) 48%, rgba(14,17,18,.18) 100%), url("https://d34w7g4gy10iej.cloudfront.net/photos/2010/6399255.jpg") !important;
+  background-position: center 48% !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
