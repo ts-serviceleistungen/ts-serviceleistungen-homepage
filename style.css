@@ -175,3 +175,28 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+
+/* Über-mich-Seite – passend zum Schwarz-Weiß-Gold-Auftritt */
+.about-hero {
+  min-height: 430px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-image: linear-gradient(90deg, rgba(14,17,18,.94), rgba(14,17,18,.72)) !important;
+  padding-top: clamp(64px, 8vw, 110px);
+  padding-bottom: clamp(64px, 8vw, 110px);
+}
+.about-hero h1 { max-width: 850px; }
+.about-hero > p:not(.eyebrow) { max-width: 720px; line-height: 1.8; }
+.about-story { max-width: 900px; margin-inline: auto; }
+.about-story p:not(.eyebrow) { line-height: 1.85; color: var(--muted, #555); }
+.about-values { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; max-width:1200px; margin:0 auto; padding:50px 24px 70px; }
+.about-values>div { border-top:2px solid #d8b35b; padding:22px 4px; }
+.about-number { color:#b58c32; font-size:13px; font-weight:800; letter-spacing:.16em; }
+.about-values h3 { margin:14px 0 10px; }
+.about-values p { line-height:1.7; color:var(--muted, #555); }
+.about-close { background:#f5f3ee; }
+.about-close p { max-width:760px; line-height:1.8; }
+@media(max-width:760px){.about-values{grid-template-columns:1fr;gap:10px;padding:30px 20px 45px}.about-hero{min-height:350px}}
