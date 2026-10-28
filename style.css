@@ -207,3 +207,37 @@
 .qualification-entry{border-left:2px solid var(--gold,#c9a45c);padding:.15rem 0 .25rem 1.25rem;margin:1.5rem 0}
 .qualification-entry h3{margin:0 0 .55rem}
 .qualification-entry p{margin:0;max-width:75ch}
+
+
+/* 2026-10: Navigation entlasten und CTA-Kontrast auf allen Seiten vereinheitlichen */
+.site-header{gap:clamp(18px,2vw,34px);padding-inline:clamp(18px,3.2vw,52px)}
+.brand{flex:0 0 auto;gap:10px;font-size:clamp(14px,1.05vw,17px)}
+.brand img{width:58px}
+.nav{flex:1;justify-content:flex-end;gap:clamp(10px,1.25vw,20px);font-size:11px}
+.nav a:not(.nav-cta){white-space:nowrap}
+.nav-cta{white-space:nowrap;padding:12px 15px}
+.menu-toggle{flex:0 0 auto;color:var(--ink);cursor:pointer}
+@media(max-width:1320px){
+  .site-header{height:76px;padding-inline:24px}
+  .brand img{width:52px;height:44px}
+  .menu-toggle{display:block;margin-left:auto}
+  .nav{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;padding:14px 24px 22px;box-shadow:0 12px 24px rgba(0,0,0,.12);align-items:stretch;flex-direction:column;gap:2px;max-height:calc(100vh - 76px);overflow:auto}
+  .nav.open{display:flex}
+  .nav a:not(.nav-cta){padding:12px 0;font-size:13px}
+  .nav-cta{text-align:center;margin-top:8px}
+}
+@media(max-width:760px){.site-header{height:72px;padding-inline:18px}.nav{top:72px;max-height:calc(100vh - 72px)}}
+.subhero a.button.gold,.cta-band a.button.gold,.reviews-actions a.button.gold,.content-section a.button.gold{
+  color:#171717!important;background:#d6b15d!important;border:1px solid #d6b15d!important;
+  text-shadow:none!important;opacity:1!important;visibility:visible!important;
+}
+.subhero a.button.outline,.cta-band a.button.outline,.content-section a.button.outline,
+.reviews-actions a.button.outline{
+  color:#fff!important;background:#25282a!important;border:1px solid #e3d3a8!important;
+  text-shadow:none!important;opacity:1!important;visibility:visible!important;
+}
+.subhero a.button:hover,.cta-band a.button:hover,.content-section a.button:hover{filter:brightness(1.08)}
+/* Dunkle Banner: Textlinks dürfen nicht im dunklen Hintergrund verschwinden */
+.subhero .text-link,.about-hero .text-link,.cta-band .text-link{
+  color:#fff!important;border-bottom-color:#d6b15d;text-shadow:none!important;
+}
