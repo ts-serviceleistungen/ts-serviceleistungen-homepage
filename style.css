@@ -200,3 +200,10 @@
 .about-close { background:#f5f3ee; }
 .about-close p { max-width:760px; line-height:1.8; }
 @media(max-width:760px){.about-values{grid-template-columns:1fr;gap:10px;padding:30px 20px 45px}.about-hero{min-height:350px}}
+
+
+/* Über mich: beruflicher Werdegang */
+.about-qualification{max-width:1000px;margin:0 auto;padding-top:clamp(3rem,7vw,6rem);padding-bottom:clamp(3rem,7vw,6rem)}
+.qualification-entry{border-left:2px solid var(--gold,#c9a45c);padding:.15rem 0 .25rem 1.25rem;margin:1.5rem 0}
+.qualification-entry h3{margin:0 0 .55rem}
+.qualification-entry p{margin:0;max-width:75ch}
